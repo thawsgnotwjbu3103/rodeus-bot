@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "ES2017",
+      "module": "ES2022",
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+    },
+    "ts-node": {
+        "esm": true
+    }
+  }

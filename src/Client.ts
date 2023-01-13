@@ -1,6 +1,6 @@
 import { REST } from "@discordjs/rest";
 import { Routes } from "discord-api-types/v9";
-import { Client, Intents, Collection } from "discord.js";
+import { Client, Collection } from "discord.js";
 
 export default class RodeusClient extends Client {
   commands: Collection<unknown, any>;
@@ -10,7 +10,8 @@ export default class RodeusClient extends Client {
   }
 
   start() {
-
+    this.registerCommands();
+    this.loadClient();
   }
 
   registerCommands() {
@@ -19,7 +20,7 @@ export default class RodeusClient extends Client {
           name: "ping",
           description: "Replies with Pong!",
         },
-      ];
+    ];
 
     const rest = new REST({ version: "9" }).setToken(process.env.TOKEN);
     (async () => {

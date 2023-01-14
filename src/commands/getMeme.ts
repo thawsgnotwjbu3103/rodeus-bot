@@ -4,7 +4,7 @@ import { MessageAttachment } from "discord.js";
 
 export default {
   data: new SlashCommandBuilder()
-    .setName("get_meme")
+    .setName("meme")
     .setDescription("Get random meme"),
   async execute(interaction: any) {
     const res: any = await getRandomMeme();

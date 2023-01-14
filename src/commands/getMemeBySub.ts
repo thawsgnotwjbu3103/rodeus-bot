@@ -4,7 +4,7 @@ import { MessageAttachment } from "discord.js";
 
 export default {
   data: new SlashCommandBuilder()
-    .setName("meme")
+    .setName("get_meme")
     .setDescription("Get random meme by subreddit")
     .addStringOption((option) =>
       option
